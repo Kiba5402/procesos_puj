@@ -1,10 +1,10 @@
 {
-  "id" : "Solicitud",
-  "name" : "Solicitud",
+  "id" : "FinalDetallarSolicitud",
+  "name" : "FinalDetallarSolicitud",
   "type" : "form",
-  "uuid" : "9de753ef-a6e8-4159-9191-caa709db287b",
+  "uuid" : "16e2f89a-4e47-42c7-8b96-6c73910238ec",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1725938992182,
+  "lastUpdate" : 1725944074324,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "0879bb12-fa8f-42dc-b89a-2249537fbd58",
+        "reference" : "a5e85cbb-4412-4416-8b8c-37a68d92ff78",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -53,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "865b9f96-e645-48bb-b82d-9b6783628ba0",
+              "reference" : "0a7a6ecb-927a-45ac-a0a1-612079030bd6",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "6ecbd10e-7538-4e16-a09e-ed366aae4223",
+              "reference" : "c75c4534-368a-4ef0-9fdc-d2118827b854",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +117,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "2a7d612f-966c-48da-b252-96b508769d32",
+        "reference" : "732986e3-50ad-42af-91e0-85f9dd48a4a1",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +126,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "db3e4777-5902-4262-9262-352bd1a39f9e",
+          "reference" : "92c2fea2-1e4d-492b-b9d1-7368c444c4fb",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -154,7 +154,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Solicitud Informe de consumos aplicaciones analitica"
+                    "value" : "Analitica O P"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -163,13 +163,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
                   }
                 },
-                "reference" : "d9ea2705-c6bd-4104-9389-7e453965fff9",
+                "reference" : "afad0862-d0ad-42cc-8eb2-c7d1b232278b",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -201,7 +197,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f06f0e0f-9608-467e-98f2-8ee2db1b2f60",
+                "reference" : "c6625a16-aea6-45d2-bad1-0cf8f7934695",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -215,13 +211,17 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "dateFormat" : {
+                        "labelPosition" : {
                           "type" : "constant",
-                          "value" : "MM/dd/yyyy"
+                          "value" : "top"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -233,38 +233,18 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
                           "value" : "Fecha Requerimiento"
                         },
-                        "type" : {
+                        "placeholder" : {
                           "type" : "constant"
                         },
-                        "required" : {
+                        "type" : {
                           "type" : "constant",
-                          "value" : true
-                        },
-                        "todayLabel" : {
-                          "type" : "constant",
-                          "value" : "Today"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "showToday" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                          "value" : "text"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -272,12 +252,42 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.fechaRequerimiento"
+                          "value" : "analiticaOP.fechaRequerimiento"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
-                      "reference" : "74f1b73d-d80b-4e57-89b7-a190e866fc6c",
+                      "reference" : "038e1906-83f9-44f8-af07-dfd610ec891b",
                       "hasValidationError" : false,
-                      "id" : "pbDatePicker",
+                      "id" : "pbInput",
                       "description" : ""
                     }
                   ],
@@ -291,13 +301,17 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "dateFormat" : {
+                        "labelPosition" : {
                           "type" : "constant",
-                          "value" : "MM/dd/yyyy"
+                          "value" : "top"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -309,38 +323,18 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
                           "value" : "Fecha Inicio Periodo Analisis"
                         },
-                        "type" : {
+                        "placeholder" : {
                           "type" : "constant"
                         },
-                        "required" : {
+                        "type" : {
                           "type" : "constant",
-                          "value" : false
-                        },
-                        "todayLabel" : {
-                          "type" : "constant",
-                          "value" : "Today"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "showToday" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                          "value" : "text"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -348,16 +342,42 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.fechaInicioPeriodoAnalisis"
+                          "value" : "analiticaOP.fechaInicioPeriodoAnalisis"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
-                      "reference" : "a549f395-02d9-4bda-8871-59e44aba8e42",
+                      "reference" : "e7fd12c9-8866-470b-be08-b1379d3b4223",
                       "hasValidationError" : false,
-                      "id" : "pbDatePicker",
+                      "id" : "pbInput",
                       "description" : ""
                     }
                   ],
@@ -371,13 +391,17 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "dateFormat" : {
+                        "labelPosition" : {
                           "type" : "constant",
-                          "value" : "MM/dd/yyyy"
+                          "value" : "top"
                         },
                         "cssClasses" : {
                           "type" : "constant",
@@ -389,38 +413,18 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
                           "value" : "Fecha Final Periodo Analisis"
                         },
-                        "type" : {
+                        "placeholder" : {
                           "type" : "constant"
                         },
-                        "required" : {
+                        "type" : {
                           "type" : "constant",
-                          "value" : false
-                        },
-                        "todayLabel" : {
-                          "type" : "constant",
-                          "value" : "Today"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "showToday" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                          "value" : "text"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -428,16 +432,42 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.fechaFinalPeriodoAnalisis"
+                          "value" : "analiticaOP.fechaFinalPeriodoAnalisis"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
-                      "reference" : "e971a4b3-82d7-48c0-a560-96b8564d19a1",
+                      "reference" : "12303614-bee5-4c4c-8514-6709a9542140",
                       "hasValidationError" : false,
-                      "id" : "pbDatePicker",
+                      "id" : "pbInput",
                       "description" : ""
                     }
                   ],
@@ -465,7 +495,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -485,7 +515,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Detallar Solicitud"
+                          "value" : "Detalle Solicitud hechos por marketing"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -497,12 +527,333 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.detalleSolicitud"
+                          "value" : "analiticaOP.detalleSolicitud"
                         }
                       },
-                      "reference" : "7d12221c-526c-4b95-a404-fb4b9145451c",
+                      "reference" : "51721edb-be72-4e68-a261-2f4de8c2815d",
                       "hasValidationError" : false,
                       "id" : "pbTextarea"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Aplicaciones A Consultar"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "ba2be1f7-be98-4c18-8cd7-853aadc61396",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "container",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "repeatedCollection" : {
+                          "type" : "variable",
+                          "value" : "analiticaOP.aplicacionesAConsultar"
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "0d71baf9-0c27-4628-b346-55b84872f959",
+                      "hasValidationError" : false,
+                      "id" : "pbContainer",
+                      "rows" : [
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "md" : 12,
+                              "sm" : 12,
+                              "xs" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 0
+                              },
+                              "readOnly" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : ""
+                              },
+                              "placeholder" : {
+                                "type" : "constant"
+                              },
+                              "type" : {
+                                "type" : "constant",
+                                "value" : "text"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "$item"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "minLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "maxLength" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "debounce" : {
+                                "type" : "constant",
+                                "value" : 0
+                              },
+                              "min" : {
+                                "type" : "constant"
+                              },
+                              "max" : {
+                                "type" : "constant"
+                              },
+                              "step" : {
+                                "type" : "constant",
+                                "value" : 1
+                              }
+                            },
+                            "reference" : "34010531-cfdd-46fa-9609-7b9c8f2b6e77",
+                            "hasValidationError" : false,
+                            "id" : "pbInput",
+                            "description" : ""
+                          },
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "md" : 12,
+                              "sm" : 12,
+                              "xs" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "removeItem" : {
+                                "type" : "variable",
+                                "value" : "$item"
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "buttonStyle" : {
+                                "type" : "constant",
+                                "value" : "danger"
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "<span class=\"glyphicon glyphicon-remove\"></span>"
+                              },
+                              "dataToSend" : {
+                                "type" : "expression"
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "collectionPosition" : {
+                                "type" : "constant",
+                                "value" : "Item"
+                              },
+                              "targetUrlOnSuccess" : {
+                                "type" : "interpolation"
+                              },
+                              "action" : {
+                                "type" : "constant",
+                                "value" : "Remove from collection"
+                              },
+                              "collectionToModify" : {
+                                "type" : "variable",
+                                "value" : "$collection"
+                              },
+                              "valueToAdd" : {
+                                "type" : "expression"
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "alignment" : {
+                                "type" : "constant",
+                                "value" : "right"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              }
+                            },
+                            "reference" : "e14b8a8e-07d8-4568-b9f5-d4395a128b33",
+                            "hasValidationError" : false,
+                            "id" : "pbButton",
+                            "description" : ""
+                          }
+                        ]
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "removeItem" : {
+                          "type" : "variable"
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "primary"
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "<span class=\"glyphicon glyphicon-plus\"></span>"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Add to collection"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "analiticaOP.aplicacionesAConsultar"
+                        },
+                        "valueToAdd" : {
+                          "type" : "expression"
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "ef5b418c-d4ae-4171-9a29-df611c17a292",
+                      "hasValidationError" : false,
+                      "id" : "pbButton",
+                      "description" : ""
                     }
                   ]
                 ]
@@ -535,7 +886,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Enviar solicitud a operaciones"
+                    "value" : "Enviar solicitud a operaciones TI"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -604,7 +955,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "5ab45e1a-3332-43f1-add5-8368991ad954",
+                "reference" : "c5dcf593-38fc-4ffe-8cbf-810400b8e5c7",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -664,7 +1015,7 @@
                     "value" : 4
                   }
                 },
-                "reference" : "198593b6-2b28-4aa9-be7c-80752f28a53e",
+                "reference" : "a799d275-49f2-43fa-92b9-ea5cdbb06d95",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -680,20 +1031,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{\r",
-        "  \"solicitudInformeInput\" : {\r",
-        "    \"fechaRequerimiento\" : null,\r",
-        "    \"fechaInicioPeriodoAnalisis\" : null,\r",
-        "    \"fechaFinalPeriodoAnalisis\" : null,\r",
-        "    \"detalleSolicitud\" : \"\"\r",
-        "  }\r",
-        "}"
       ],
       "exposed" : false
     },
@@ -715,8 +1052,17 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "\tsolicitudInformeInput: $data.formInput.solicitudInformeInput",
+        "if( $data.analiticaOP ){",
+        "\treturn {",
+        "\t\t//map analiticaOP variable to expected task contract input",
+        "\t\tanaliticaOPInput: {",
+        "\t\t\tfechaRequerimiento: $data.analiticaOP.fechaRequerimiento !== undefined ? $data.analiticaOP.fechaRequerimiento : null,",
+        "\t\t\tfechaInicioPeriodoAnalisis: $data.analiticaOP.fechaInicioPeriodoAnalisis !== undefined ? $data.analiticaOP.fechaInicioPeriodoAnalisis : null,",
+        "\t\t\tfechaFinalPeriodoAnalisis: $data.analiticaOP.fechaFinalPeriodoAnalisis !== undefined ? $data.analiticaOP.fechaFinalPeriodoAnalisis : null,",
+        "\t\t\taplicacionesAConsultar: $data.analiticaOP.aplicacionesAConsultar !== undefined ? $data.analiticaOP.aplicacionesAConsultar : null,",
+        "\t\t\tdetalleSolicitud: $data.analiticaOP.detalleSolicitud !== undefined ? $data.analiticaOP.detalleSolicitud : null",
+        "\t\t}",
+        "\t}",
         "}"
       ],
       "exposed" : false
@@ -725,6 +1071,13 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}/context"
+      ],
+      "exposed" : false
+    },
+    "analiticaOP" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.analiticaOP_ref.link}}"
       ],
       "exposed" : false
     },
@@ -738,14 +1091,14 @@
   },
   "assets" : [
     {
-      "id" : "ccb7f8ed-daf2-46c0-8d88-1238e5a29ebb",
+      "id" : "318c230b-3fd9-434d-89cc-d583585cb49b",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "deb4f6cf-4dc4-483f-9e61-15dc15882b6d",
+      "id" : "8225af5b-1d2b-46d8-8dba-ac04231b789f",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,

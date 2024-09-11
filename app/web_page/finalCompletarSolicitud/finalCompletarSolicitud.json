@@ -1,10 +1,10 @@
 {
-  "id" : "Solicitud",
-  "name" : "Solicitud",
+  "id" : "finalCompletarSolicitud",
+  "name" : "finalCompletarSolicitud",
   "type" : "form",
-  "uuid" : "9de753ef-a6e8-4159-9191-caa709db287b",
+  "uuid" : "99379f1e-9d8c-4c1d-bc98-8339914ba002",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1725938992182,
+  "lastUpdate" : 1725944291550,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "0879bb12-fa8f-42dc-b89a-2249537fbd58",
+        "reference" : "36f4c4e1-7c1f-427f-af52-ebf8a511c69d",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -53,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "865b9f96-e645-48bb-b82d-9b6783628ba0",
+              "reference" : "9c19d1b6-ebd4-438b-a66b-8a7b8ee31183",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "6ecbd10e-7538-4e16-a09e-ed366aae4223",
+              "reference" : "538028d9-bf2a-4109-b463-6f28be27244d",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +117,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "2a7d612f-966c-48da-b252-96b508769d32",
+        "reference" : "f805b7f1-1f65-4894-b6a8-2ac709b5d80d",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +126,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "db3e4777-5902-4262-9262-352bd1a39f9e",
+          "reference" : "dd50eac6-6612-45a7-84a2-34d963d3838b",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -154,7 +154,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Solicitud Informe de consumos aplicaciones analitica"
+                    "value" : "Crear solicitud Informe"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -169,7 +169,7 @@
                     "value" : false
                   }
                 },
-                "reference" : "d9ea2705-c6bd-4104-9389-7e453965fff9",
+                "reference" : "0a835bd6-8f1e-4e24-bda3-93245c47af1f",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -201,7 +201,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f06f0e0f-9608-467e-98f2-8ee2db1b2f60",
+                "reference" : "10fb1829-67ac-4c91-87c8-ae429268325d",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -244,7 +244,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
                         "todayLabel" : {
                           "type" : "constant",
@@ -272,10 +272,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.fechaRequerimiento"
+                          "value" : "solicitudInforme.fechaRequerimiento"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
-                      "reference" : "74f1b73d-d80b-4e57-89b7-a190e866fc6c",
+                      "reference" : "fe857bd2-8d24-4276-bafb-d1ca2cc3d796",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -348,14 +352,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.fechaInicioPeriodoAnalisis"
+                          "value" : "solicitudInforme.fechaInicioPeriodoAnalisis"
                         },
                         "allowHTML" : {
                           "type" : "constant",
                           "value" : false
                         }
                       },
-                      "reference" : "a549f395-02d9-4bda-8871-59e44aba8e42",
+                      "reference" : "873757a9-59e6-40f7-9ee6-068c4eaa2e0e",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -428,14 +432,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.fechaFinalPeriodoAnalisis"
+                          "value" : "solicitudInforme.fechaFinalPeriodoAnalisis"
                         },
                         "allowHTML" : {
                           "type" : "constant",
                           "value" : false
                         }
                       },
-                      "reference" : "e971a4b3-82d7-48c0-a560-96b8564d19a1",
+                      "reference" : "3e7c400a-85c9-452c-a43e-7750ed11bf8a",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -465,7 +469,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
                         "allowHTML" : {
                           "type" : "constant",
@@ -485,7 +489,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Detallar Solicitud"
+                          "value" : "Detalle Solicitud"
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -497,10 +501,10 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.detalleSolicitud"
+                          "value" : "solicitudInforme.detalleSolicitud"
                         }
                       },
-                      "reference" : "7d12221c-526c-4b95-a404-fb4b9145451c",
+                      "reference" : "d3a80c1e-f3e1-4894-949f-a6f2bc185731",
                       "hasValidationError" : false,
                       "id" : "pbTextarea"
                     }
@@ -531,7 +535,7 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "success"
+                    "value" : "primary"
                   },
                   "label" : {
                     "type" : "interpolation",
@@ -604,7 +608,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "5ab45e1a-3332-43f1-add5-8368991ad954",
+                "reference" : "a0b20bc5-2662-4c3e-a785-cef3dba2e877",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -654,17 +658,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
                   }
                 },
-                "reference" : "198593b6-2b28-4aa9-be7c-80752f28a53e",
+                "reference" : "f06e28ad-6f25-4fc4-930f-a4de30561639",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -676,24 +672,17 @@
     ]
   ],
   "variables" : {
+    "solicitudInforme" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.solicitudInforme_ref.link}}"
+      ],
+      "exposed" : false
+    },
     "task" : {
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{\r",
-        "  \"solicitudInformeInput\" : {\r",
-        "    \"fechaRequerimiento\" : null,\r",
-        "    \"fechaInicioPeriodoAnalisis\" : null,\r",
-        "    \"fechaFinalPeriodoAnalisis\" : null,\r",
-        "    \"detalleSolicitud\" : \"\"\r",
-        "  }\r",
-        "}"
       ],
       "exposed" : false
     },
@@ -715,8 +704,17 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "\tsolicitudInformeInput: $data.formInput.solicitudInformeInput",
+        "if( $data.solicitudInforme ){",
+        "\treturn {",
+        "\t\t//map solicitudInforme variable to expected task contract input",
+        "\t\tsolicitudInformeInput: {",
+        "\t\t\tfechaRequerimiento: $data.solicitudInforme.fechaRequerimiento !== undefined ? $data.solicitudInforme.fechaRequerimiento : null,",
+        "\t\t\tfechaInicioPeriodoAnalisis: $data.solicitudInforme.fechaInicioPeriodoAnalisis !== undefined ? $data.solicitudInforme.fechaInicioPeriodoAnalisis : null,",
+        "\t\t\tfechaFinalPeriodoAnalisis: $data.solicitudInforme.fechaFinalPeriodoAnalisis !== undefined ? $data.solicitudInforme.fechaFinalPeriodoAnalisis : null,",
+        "\t\t\tdetalleSolicitud: $data.solicitudInforme.detalleSolicitud !== undefined ? $data.solicitudInforme.detalleSolicitud : null,",
+        "\t\t\tbajaEnConsumos: $data.solicitudInforme.bajaEnConsumos !== undefined ? $data.solicitudInforme.bajaEnConsumos : null",
+        "\t\t}",
+        "\t}",
         "}"
       ],
       "exposed" : false
@@ -738,14 +736,14 @@
   },
   "assets" : [
     {
-      "id" : "ccb7f8ed-daf2-46c0-8d88-1238e5a29ebb",
+      "id" : "3d0ac3b1-2deb-48ab-bdee-c18004963b4c",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "deb4f6cf-4dc4-483f-9e61-15dc15882b6d",
+      "id" : "36879fbf-afcf-40ae-91cc-ece947df2cfd",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,

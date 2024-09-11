@@ -1,10 +1,10 @@
 {
-  "id" : "Solicitud",
-  "name" : "Solicitud",
+  "id" : "Prueba12",
+  "name" : "Prueba12",
   "type" : "form",
-  "uuid" : "9de753ef-a6e8-4159-9191-caa709db287b",
+  "uuid" : "d85d6c9d-b3b6-45f6-a785-eec88e63e735",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1725938992182,
+  "lastUpdate" : 1725941011025,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "0879bb12-fa8f-42dc-b89a-2249537fbd58",
+        "reference" : "6c562ba3-b446-4c23-8eca-861832995e7c",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -51,9 +51,13 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
                 }
               },
-              "reference" : "865b9f96-e645-48bb-b82d-9b6783628ba0",
+              "reference" : "b985ec22-c199-44c2-83d3-a0e90ff5c49a",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +105,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "6ecbd10e-7538-4e16-a09e-ed366aae4223",
+              "reference" : "70934e6b-d28f-48f3-990a-7c9fcf93dbbf",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +121,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "2a7d612f-966c-48da-b252-96b508769d32",
+        "reference" : "c69211b3-4c61-401e-bb9e-00b761e6f9db",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +130,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "db3e4777-5902-4262-9262-352bd1a39f9e",
+          "reference" : "58cdb387-a152-48b8-bf3e-bf2153ab8a64",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -154,7 +158,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Solicitud Informe de consumos aplicaciones analitica"
+                    "value" : "Solicitud Informe"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -163,13 +167,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
                   }
                 },
-                "reference" : "d9ea2705-c6bd-4104-9389-7e453965fff9",
+                "reference" : "ea3a3a80-aeb6-4a54-8854-3b8911906500",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -201,7 +201,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f06f0e0f-9608-467e-98f2-8ee2db1b2f60",
+                "reference" : "5292ae97-4cff-46ea-baf5-7b4fab4ec201",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -275,7 +275,7 @@
                           "value" : "formInput.solicitudInformeInput.fechaRequerimiento"
                         }
                       },
-                      "reference" : "74f1b73d-d80b-4e57-89b7-a190e866fc6c",
+                      "reference" : "f24f7052-c491-4374-97af-fa57bf02a462",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -332,7 +332,7 @@
                         },
                         "showToday" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -349,13 +349,9 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "formInput.solicitudInformeInput.fechaInicioPeriodoAnalisis"
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
                         }
                       },
-                      "reference" : "a549f395-02d9-4bda-8871-59e44aba8e42",
+                      "reference" : "b0794cbf-a103-400d-b695-652f8dbb2a77",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
@@ -412,7 +408,7 @@
                         },
                         "showToday" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -429,80 +425,12 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "formInput.solicitudInformeInput.fechaFinalPeriodoAnalisis"
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
                         }
                       },
-                      "reference" : "e971a4b3-82d7-48c0-a560-96b8564d19a1",
+                      "reference" : "94fa41fa-6f8a-4ed1-a29e-162a3c721ba9",
                       "hasValidationError" : false,
                       "id" : "pbDatePicker",
                       "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Detallar Solicitud"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "formInput.solicitudInformeInput.detalleSolicitud"
-                        }
-                      },
-                      "reference" : "7d12221c-526c-4b95-a404-fb4b9145451c",
-                      "hasValidationError" : false,
-                      "id" : "pbTextarea"
                     }
                   ]
                 ]
@@ -531,11 +459,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "success"
+                    "value" : "primary"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Enviar solicitud a operaciones"
+                    "value" : "Submit"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -604,7 +532,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "5ab45e1a-3332-43f1-add5-8368991ad954",
+                "reference" : "a33ada58-bde0-4b74-af7a-4bdd9120467b",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -654,17 +582,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
                   }
                 },
-                "reference" : "198593b6-2b28-4aa9-be7c-80752f28a53e",
+                "reference" : "d168f08d-7d75-4281-a86a-49ff54821e8e",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -690,8 +610,7 @@
         "  \"solicitudInformeInput\" : {\r",
         "    \"fechaRequerimiento\" : null,\r",
         "    \"fechaInicioPeriodoAnalisis\" : null,\r",
-        "    \"fechaFinalPeriodoAnalisis\" : null,\r",
-        "    \"detalleSolicitud\" : \"\"\r",
+        "    \"fechaFinalPeriodoAnalisis\" : null\r",
         "  }\r",
         "}"
       ],
@@ -738,16 +657,16 @@
   },
   "assets" : [
     {
-      "id" : "ccb7f8ed-daf2-46c0-8d88-1238e5a29ebb",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "7ff1ffa8-c6d1-4e20-9d99-369ed7c62586",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "deb4f6cf-4dc4-483f-9e61-15dc15882b6d",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "64d913aa-3c36-4fec-b353-33be265b900c",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }

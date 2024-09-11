@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "f3a8434b-c009-4c41-afce-efd1af721165",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1725075033908,
+  "lastUpdate" : 1726024462053,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -116,7 +116,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "e75fb44b-d41c-4ce7-bc95-5a58864b393a",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -557,66 +566,47 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
+                        "caption" : {
+                          "type" : "interpolation",
+                          "value" : ""
                         },
                         "allowHTML" : {
                           "type" : "constant",
+                          "value" : false
+                        },
+                        "headers" : {
+                          "type" : "constant",
+                          "value" : [
+                            "Aplicativos a consultar"
+                          ]
+                        },
+                        "content" : {
+                          "type" : "expression",
+                          "value" : "apps2"
+                        },
+                        "columnsKey" : {
+                          "type" : "expression",
+                          "value" : ""
+                        },
+                        "selectedRow" : {
+                          "type" : "variable"
+                        },
+                        "striped" : {
+                          "type" : "constant",
                           "value" : true
                         },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelHidden" : {
+                        "condensed" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Aplicaciones a consultar solicitadas por operaciones"
-                        },
-                        "labelPosition" : {
+                        "bordered" : {
                           "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "coordinacionTI.aplicacionesAConsultar"
-                        },
-                        "toolbarsGrp1" : {
-                          "type" : "constant",
-                          "value" : [ ]
-                        },
-                        "toolbarsGrp2" : {
-                          "type" : "constant",
-                          "value" : [ ]
-                        },
-                        "toolbarsGrp3" : {
-                          "type" : "constant",
-                          "value" : [ ]
-                        },
-                        "toolbarsGrp4" : {
-                          "type" : "constant",
-                          "value" : [ ]
+                          "value" : true
                         }
                       },
-                      "reference" : "bbe782a3-60ba-442a-ad8b-98fde5a3f883",
+                      "reference" : "730827f0-cbb0-42ab-92c2-3966969b80ba",
                       "hasValidationError" : false,
-                      "id" : "pbRichTextarea"
+                      "id" : "pbTable"
                     }
                   ],
                   [
@@ -637,11 +627,68 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "readOnly" : {
+                        "caption" : {
+                          "type" : "interpolation"
+                        },
+                        "allowHTML" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "required" : {
+                        "headers" : {
+                          "type" : "constant",
+                          "value" : [
+                            "Id",
+                            "Name",
+                            "Description",
+                            "Date"
+                          ]
+                        },
+                        "content" : {
+                          "type" : "constant"
+                        },
+                        "columnsKey" : {
+                          "type" : "constant"
+                        },
+                        "selectedRow" : {
+                          "type" : "variable"
+                        },
+                        "striped" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "condensed" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "bordered" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "cbc26f19-f701-479a-9b67-bc1674433672",
+                      "hasValidationError" : false,
+                      "id" : "pbTable"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
                           "type" : "constant",
                           "value" : false
                         },
@@ -649,87 +696,69 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Agregar consumos de app"
                         },
-                        "maxLength" : {
+                        "alignment" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : "left"
                         },
-                        "labelHidden" : {
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "info"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "Open modal"
+                        },
+                        "assign" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Informe Consumo"
+                        "url" : {
+                          "type" : "interpolation"
                         },
-                        "labelPosition" : {
+                        "responseStatusCode" : {
+                          "type" : "variable"
+                        },
+                        "dataToSend" : {
+                          "type" : "constant"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable"
+                        },
+                        "closeOnSuccess" : {
                           "type" : "constant",
-                          "value" : "top"
+                          "value" : false
                         },
-                        "labelWidth" : {
+                        "dataFromError" : {
+                          "type" : "variable"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable"
+                        },
+                        "modalId" : {
                           "type" : "constant",
-                          "value" : 1
+                          "value" : "modal1"
                         },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "coordinacionTI.informeConsumo"
-                        },
-                        "toolbarsGrp1" : {
+                        "collectionPosition" : {
                           "type" : "constant",
-                          "value" : [
-                            "h1",
-                            "h2",
-                            "h3",
-                            "h4",
-                            "h5",
-                            "h6",
-                            "p",
-                            "ul",
-                            "ol"
-                          ]
+                          "value" : "Last"
                         },
-                        "toolbarsGrp2" : {
-                          "type" : "constant",
-                          "value" : [
-                            "bold",
-                            "italics",
-                            "underline",
-                            "strikeThrough",
-                            "pre",
-                            "quote"
-                          ]
+                        "valueToAdd" : {
+                          "type" : "constant"
                         },
-                        "toolbarsGrp3" : {
-                          "type" : "constant",
-                          "value" : [
-                            "justifyLeft",
-                            "justifyCenter",
-                            "justifyRight",
-                            "indent",
-                            "outdent"
-                          ]
-                        },
-                        "toolbarsGrp4" : {
-                          "type" : "constant",
-                          "value" : [
-                            "html",
-                            "insertImage",
-                            "insertLink",
-                            "insertVideo",
-                            "wordcount",
-                            "charcount",
-                            "undo",
-                            "redo",
-                            "clear"
-                          ]
+                        "removeItem" : {
+                          "type" : "variable"
                         }
                       },
-                      "reference" : "ef552658-258e-4c7c-bbce-1ca7420c47d3",
+                      "reference" : "5ae92e5d-42b7-4fa9-af80-f56491de9df3",
                       "hasValidationError" : false,
-                      "id" : "pbRichTextarea"
+                      "id" : "pbButton"
                     }
                   ]
                 ]
@@ -841,10 +870,123 @@
               {
                 "type" : "component",
                 "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
                   "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "apps"
+                  },
+                  "toolbarsGrp1" : {
+                    "type" : "constant",
+                    "value" : [
+                      "h1",
+                      "h2",
+                      "h3",
+                      "h4",
+                      "h5",
+                      "h6",
+                      "p",
+                      "ul",
+                      "ol"
+                    ]
+                  },
+                  "toolbarsGrp2" : {
+                    "type" : "constant",
+                    "value" : [
+                      "bold",
+                      "italics",
+                      "underline",
+                      "strikeThrough",
+                      "pre",
+                      "quote"
+                    ]
+                  },
+                  "toolbarsGrp3" : {
+                    "type" : "constant",
+                    "value" : [
+                      "justifyLeft",
+                      "justifyCenter",
+                      "justifyRight",
+                      "indent",
+                      "outdent"
+                    ]
+                  },
+                  "toolbarsGrp4" : {
+                    "type" : "constant",
+                    "value" : [
+                      "html",
+                      "insertImage",
+                      "insertLink",
+                      "insertVideo",
+                      "wordcount",
+                      "charcount",
+                      "undo",
+                      "redo",
+                      "clear"
+                    ]
+                  }
+                },
+                "reference" : "cd17de58-bceb-4377-9767-56eb68c06d21",
+                "hasValidationError" : false,
+                "id" : "pbRichTextarea"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 6,
                   "sm" : 12,
                   "xs" : 12,
-                  "lg" : 12
+                  "lg" : 6
                 },
                 "propertyValues" : {
                   "allowHTML" : {
@@ -881,12 +1023,393 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "a0c365ce-a375-41e4-9da8-004e083ba758",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "modalContainer",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : "modal1"
+          },
+          "size" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "animation" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "14783dd3-bfdf-41d5-8f84-3fee69390ac2",
+        "hasValidationError" : false,
+        "id" : "pbModalContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "6883bda2-14eb-4952-bce8-06092fdb9caa",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "d58fd072-7f7c-4fc3-81c7-8f1355290790",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Agregar registro de consumos"
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "684810c1-a100-4f08-9b18-a23d5072db8d",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "nombre"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "value" : {
+                    "type" : "variable"
+                  },
+                  "debounce" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  }
+                },
+                "reference" : "bce26f50-48eb-4998-8af6-648c1a65e556",
+                "hasValidationError" : false,
+                "id" : "pbInput"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "valor"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "value" : {
+                    "type" : "variable"
+                  },
+                  "debounce" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  }
+                },
+                "reference" : "9528dcf8-604a-4758-a824-1ffd2f370bb4",
+                "hasValidationError" : false,
+                "id" : "pbInput"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Agregar registro"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "default"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "POST"
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "dataFromError" : {
+                    "type" : "variable"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression",
+                    "value" : ""
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "26d8b869-15c3-4ab1-bc08-e094389d0c58",
+                "hasValidationError" : false,
+                "id" : "pbButton"
               }
             ]
           ]
@@ -954,6 +1477,42 @@
       "type" : "url",
       "value" : [
         "../{{context.coordinacionTI_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "apps" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.coordinacionTI.aplicacionesAConsultar"
+      ],
+      "exposed" : false
+    },
+    "informe" : {
+      "type" : "url",
+      "value" : [
+        "https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/landing_etl_consuption/"
+      ],
+      "exposed" : false
+    },
+    "informeAux" : {
+      "type" : "expression",
+      "value" : [
+        "return JSON.stringify($data.informe)"
+      ],
+      "exposed" : false
+    },
+    "apps2" : {
+      "type" : "expression",
+      "value" : [
+        "let input = $data.apps2;",
+        "",
+        "// Remover los corchetes y espacios en blanco",
+        "let cleanInput = input.replace(/[\\[\\]\\s]/g, \"\");",
+        "",
+        "// Dividir el string por comas para convertirlo en un arreglo",
+        "let resultArray = cleanInput.split(',');",
+        "",
+        "return resultArray;"
       ],
       "exposed" : false
     }
