@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "99379f1e-9d8c-4c1d-bc98-8339914ba002",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1725944291550,
+  "lastUpdate" : 1726431527208,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -205,6 +205,91 @@
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Identificador del proceso"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "solicitudInforme.idProceso"
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "c56e9129-ff58-4100-a106-e9848c17bf39",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    }
+                  ],
                   [
                     {
                       "type" : "component",
@@ -704,17 +789,17 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.solicitudInforme ){",
-        "\treturn {",
-        "\t\t//map solicitudInforme variable to expected task contract input",
-        "\t\tsolicitudInformeInput: {",
-        "\t\t\tfechaRequerimiento: $data.solicitudInforme.fechaRequerimiento !== undefined ? $data.solicitudInforme.fechaRequerimiento : null,",
-        "\t\t\tfechaInicioPeriodoAnalisis: $data.solicitudInforme.fechaInicioPeriodoAnalisis !== undefined ? $data.solicitudInforme.fechaInicioPeriodoAnalisis : null,",
-        "\t\t\tfechaFinalPeriodoAnalisis: $data.solicitudInforme.fechaFinalPeriodoAnalisis !== undefined ? $data.solicitudInforme.fechaFinalPeriodoAnalisis : null,",
-        "\t\t\tdetalleSolicitud: $data.solicitudInforme.detalleSolicitud !== undefined ? $data.solicitudInforme.detalleSolicitud : null,",
-        "\t\t\tbajaEnConsumos: $data.solicitudInforme.bajaEnConsumos !== undefined ? $data.solicitudInforme.bajaEnConsumos : null",
-        "\t\t}",
-        "\t}",
+        "if( $data.solicitudInforme ){\r",
+        "\treturn {\r",
+        "\t\t//map solicitudInforme variable to expected task contract input\r",
+        "\t\tsolicitudInformeInput: {\r",
+        "\t\t\tfechaRequerimiento: $data.solicitudInforme.fechaRequerimiento !== undefined ? $data.solicitudInforme.fechaRequerimiento : null,\r",
+        "\t\t\tfechaInicioPeriodoAnalisis: $data.solicitudInforme.fechaInicioPeriodoAnalisis !== undefined ? $data.solicitudInforme.fechaInicioPeriodoAnalisis : null,\r",
+        "\t\t\tfechaFinalPeriodoAnalisis: $data.solicitudInforme.fechaFinalPeriodoAnalisis !== undefined ? $data.solicitudInforme.fechaFinalPeriodoAnalisis : null,\r",
+        "\t\t\tdetalleSolicitud: $data.solicitudInforme.detalleSolicitud !== undefined ? $data.solicitudInforme.detalleSolicitud : null,\r",
+        "\t\t\tbajaEnConsumos: $data.solicitudInforme.bajaEnConsumos !== undefined ? $data.solicitudInforme.bajaEnConsumos : null\r",
+        "\t\t}\r",
+        "\t}\r",
         "}"
       ],
       "exposed" : false

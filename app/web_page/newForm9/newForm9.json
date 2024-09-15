@@ -1,10 +1,10 @@
 {
-  "id" : "finalValidarBaja",
-  "name" : "finalValidarBaja",
+  "id" : "newForm9",
+  "name" : "newForm9",
   "type" : "form",
-  "uuid" : "d1a87632-c522-4f40-8a20-be5aaa8ff188",
+  "uuid" : "1a455175-2247-443c-9e9d-0de3ef6e283b",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1726432165834,
+  "lastUpdate" : 1726435208390,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "b3da46ed-37f9-4daf-b80c-062bf618acf2",
+        "reference" : "bcd46b0e-82be-44c4-8ad4-78a7e755706c",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -51,13 +51,9 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
-                },
-                "allowHTML" : {
-                  "type" : "constant",
-                  "value" : false
                 }
               },
-              "reference" : "91822b15-be9a-4e3f-8dee-7be5030e1294",
+              "reference" : "09da1e7e-ff75-4a84-987e-2207efbeba4d",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -105,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "74b21f84-9995-4089-bf18-44a9c6a5c6e1",
+              "reference" : "84e048f1-ac23-466f-a623-73275aa059eb",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -121,7 +117,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "e201b53f-6ee0-4100-afa0-656bba337596",
+        "reference" : "caec684e-3538-4604-b603-583bd357663e",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -130,7 +126,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "a86d06d2-f6ee-4eec-bc5a-3ae761dd926c",
+          "reference" : "a7538e41-f854-4db9-b418-5bdbcb4fb4ca",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -158,7 +154,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Validacion baja de consumos"
+                    "value" : "Solicitud Informe"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -167,13 +163,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
                   }
                 },
-                "reference" : "01c73542-53a0-4102-81f2-adb636b1a1d2",
+                "reference" : "cee57959-3e9a-470a-b683-d0640adda67f",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -205,7 +197,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "efe9af15-f2ab-46d9-ac07-b490640bc036",
+                "reference" : "be1d510c-59d5-42be-b734-9c4e11945c48",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -213,85 +205,64 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
                         "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "cssClasses" : {
+                        "labelHidden" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : false
                         },
                         "hidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "required" : {
+                        "labelPosition" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : "top"
                         },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
+                        "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "maxLength" : {
+                        "labelWidth" : {
                           "type" : "constant",
-                          "value" : ""
+                          "value" : 1
                         },
                         "readOnly" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Identificador del proceso"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
+                          "value" : "Identificador Proceso"
                         },
                         "placeholder" : {
-                          "type" : "interpolation"
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "solicitudInforme.idProceso"
-                        },
-                        "debounce" : {
-                          "type" : "constant",
-                          "value" : 0
+                          "type" : "constant"
                         },
                         "type" : {
                           "type" : "constant",
                           "value" : "text"
                         },
-                        "min" : {
-                          "type" : "constant"
-                        },
-                        "max" : {
-                          "type" : "constant"
-                        },
-                        "step" : {
+                        "dimension" : {
                           "type" : "constant",
-                          "value" : 1
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.solicitudInformeInput.identificadorProceso"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
-                      "reference" : "740c3ddc-f953-4e8e-af49-f1cf91b09048",
+                      "reference" : "b26c0314-1729-4422-819d-e544f2c47332",
                       "hasValidationError" : false,
-                      "id" : "pbInput"
+                      "id" : "pbInput",
+                      "description" : ""
                     }
                   ],
                   [
@@ -322,7 +293,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Existe baja en los consumos?"
+                          "value" : "Baja En Consumos"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -331,17 +302,9 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "formInput.solicitudInformeInput.bajaEnConsumos"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
                         }
                       },
-                      "reference" : "d626e18f-94d4-49a5-a390-97cf1df91731",
+                      "reference" : "ecb53d79-4b9d-4e7f-af01-8f87d0e6ce5a",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
                       "description" : ""
@@ -373,11 +336,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "success"
+                    "value" : "primary"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Enviar respuesta"
+                    "value" : "Submit"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -423,30 +386,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "c197c23e-0a35-451d-996b-a1b3223bb9c0",
+                "reference" : "7d3a698d-c476-4cb9-97bd-068684322418",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -496,17 +438,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
                   }
                 },
-                "reference" : "0614e380-286d-4e96-89b4-9201a3f313de",
+                "reference" : "e7149e75-6e95-4b02-ba50-abc2c0d2a26a",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -530,6 +464,7 @@
       "value" : [
         "{\r",
         "  \"solicitudInformeInput\" : {\r",
+        "    \"identificadorProceso\" : \"\",\r",
         "    \"bajaEnConsumos\" : false\r",
         "  }\r",
         "}"
@@ -573,25 +508,18 @@
         "id"
       ],
       "exposed" : false
-    },
-    "idProcess" : {
-      "type" : "expression",
-      "value" : [
-        "return 'id-' + Date.now().toString(36) + Math.random().toString(36).substring(2);"
-      ],
-      "exposed" : false
     }
   },
   "assets" : [
     {
-      "id" : "44c57cf4-10ee-4261-aa37-9a6b17e05826",
+      "id" : "9e2a68e5-b1e0-45e9-8e6e-5e1c3161587a",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "48719a6e-0a6b-4e06-b8f0-1ac95639fde7",
+      "id" : "680cf180-3c6a-456a-9610-1325aae74ae1",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
