@@ -13,7 +13,9 @@
           <connectors xmi:type="process:Connector" xmi:id="_2hCdAHMEEe--us9BAOQ8QQ" name="appsDisponibles" definitionId="rest-get" event="ON_ENTER" definitionVersion="1.2.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_2hCdAXMEEe--us9BAOQ8QQ" definitionId="rest-get" version="1.2.0" modelVersion="8">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2hCdAnMEEe--us9BAOQ8QQ" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_2hCdA3MEEe--us9BAOQ8QQ" name="https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/landings/distinctAplicativos" content="https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/landings/distinctAplicativos" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_2hCdA3MEEe--us9BAOQ8QQ" name="url()" content="//import java.net.URLEncoder;&#xD;&#xA;String url = 'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/landings/distinctAplicativos';&#xD;&#xA;// Codificar el nombre del cliente usando URLEncoder&#xD;&#xA;String encodedQuery = URLEncoder.encode(analiticaOP.getClienteAConsultar(), &quot;UTF-8&quot;);&#xD;&#xA;return url + '/' + encodedQuery;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_o6PQEHPIEe-1xfmL7l5GDg" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2hCdBHMEEe--us9BAOQ8QQ" key="urlCookies">
                 <expression xmi:type="expression:TableExpression" xmi:id="_2hCdBXMEEe--us9BAOQ8QQ"/>
@@ -106,8 +108,8 @@
           <connectors xmi:type="process:Connector" xmi:id="__sk44HObEe-CMou5BLGUxw" name="reportes" definitionId="rest-get" event="ON_ENTER" definitionVersion="1.2.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="__sk44XObEe-CMou5BLGUxw" definitionId="rest-get" version="1.2.0" modelVersion="8">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="__sk44nObEe-CMou5BLGUxw" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="__sk443ObEe-CMou5BLGUxw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/rest-v3/reporter/'+rootProcessInstanceId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_vGqaEHOcEe-CMou5BLGUxw" name="rootProcessInstanceId" content="rootProcessInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                <expression xmi:type="expression:Expression" xmi:id="__sk443ObEe-CMou5BLGUxw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/rest-v3/reporter/'+analiticaOP.getIdentificadorProceso();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kopxAHPGEe-1xfmL7l5GDg" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="__sk45XObEe-CMou5BLGUxw" key="urlCookies">
@@ -312,6 +314,33 @@
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </messageContent>
+          <messageContent xmi:type="expression:Operation" xmi:id="_cxyUsHPBEe-CMou5BLGUxw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_cx0J4HPBEe-CMou5BLGUxw" name="analiticaOP" content="analiticaOP" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaOp">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_dISJIHPBEe-CMou5BLGUxw" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_cxzi0HPBEe-CMou5BLGUxw" name="msg01_clienteAConsultar" content="msg01_clienteAConsultar"/>
+            <operator xmi:type="expression:Operator" xmi:id="_cxyUsXPBEe-CMou5BLGUxw" type="JAVA_METHOD" expression="setClienteAConsultar">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </messageContent>
+          <messageContent xmi:type="expression:Operation" xmi:id="_xgIMAHPBEe-CMou5BLGUxw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_xgIzEXPBEe-CMou5BLGUxw" name="analiticaOP" content="analiticaOP" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaOp">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_xyZAsHPBEe-CMou5BLGUxw" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_xgIzEHPBEe-CMou5BLGUxw" name="msg01_periodoAConsultar" content="msg01_periodoAConsultar"/>
+            <operator xmi:type="expression:Operator" xmi:id="_xgIMAXPBEe-CMou5BLGUxw" type="JAVA_METHOD" expression="setPeriodoAConsultar">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </messageContent>
+          <messageContent xmi:type="expression:Operation" xmi:id="_ClacgHPDEe-CMou5BLGUxw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ClbDkXPDEe-CMou5BLGUxw" name="analiticaOP" content="analiticaOP" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaOp">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_C8AXkHPDEe-CMou5BLGUxw" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_ClbDkHPDEe-CMou5BLGUxw" name="msg01_identificadorProceso" content="msg01_identificadorProceso"/>
+            <operator xmi:type="expression:Operator" xmi:id="_ClacgXPDEe-CMou5BLGUxw" type="JAVA_METHOD" expression="setIdentificadorProceso">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </messageContent>
         </elements>
         <elements xmi:type="process:IntermediateThrowMessageEvent" xmi:id="_SDRfIGXBEe-U4-i8oNpc-g" name="Solicitar consulta de aplicativos" outgoing="_xhpKgGXBEe-U4-i8oNpc-g" incoming="_UA0J4GXBEe-U4-i8oNpc-g" outgoingMessages="_Sg-y4GdCEe-UmboBsrU91w">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_SDRfImXBEe-U4-i8oNpc-g" name="" content="" returnTypeFixed="true"/>
@@ -501,7 +530,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_usiRoWadEe-gueu3e-gqpw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_7MRZoGW9Ee-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_40OI4HO6Ee-CMou5BLGUxw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_M2nCsHPHEe-1xfmL7l5GDg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_7MRZomW9Ee-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_7MRZo2W9Ee-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -911,7 +940,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_ZZ4c0WcgEe-th7Abt9qiNg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_3F8WD2XAEe-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_4nn3UHO6Ee-CMou5BLGUxw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_Mo2TgHPHEe-1xfmL7l5GDg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3F8WEWXAEe-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_3F8WEmXAEe-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -1369,6 +1398,24 @@
                   <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_KgvG_G8mEe-W36AIBctTLA" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
                 </expressions>
               </expressions>
+              <expressions xmi:type="expression:ListExpression" xmi:id="_aCZWQHPBEe-CMou5BLGUxw">
+                <expressions xmi:type="expression:Expression" xmi:id="_aCZWQXPBEe-CMou5BLGUxw" name="msg01_clienteAConsultar" content="msg01_clienteAConsultar" returnTypeFixed="true"/>
+                <expressions xmi:type="expression:Expression" xmi:id="_aCZWQnPBEe-CMou5BLGUxw" name="send_msg01_clienteAConsultar" content="solicitudInforme.getClienteAConsultar();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_aCZWQ3PBEe-CMou5BLGUxw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expressions>
+              </expressions>
+              <expressions xmi:type="expression:ListExpression" xmi:id="_aCZ9UHPBEe-CMou5BLGUxw">
+                <expressions xmi:type="expression:Expression" xmi:id="_aCZ9UXPBEe-CMou5BLGUxw" name="msg01_periodoAConsultar" content="msg01_periodoAConsultar" returnTypeFixed="true"/>
+                <expressions xmi:type="expression:Expression" xmi:id="_aCZ9UnPBEe-CMou5BLGUxw" name="send_msg01_periodoAConsultar" content="solicitudInforme.getPeriodoAConsultar();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_aCZ9U3PBEe-CMou5BLGUxw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expressions>
+              </expressions>
+              <expressions xmi:type="expression:ListExpression" xmi:id="_B8DWcHPDEe-CMou5BLGUxw">
+                <expressions xmi:type="expression:Expression" xmi:id="_B8DWcXPDEe-CMou5BLGUxw" name="msg01_identificadorProceso" content="msg01_identificadorProceso" returnTypeFixed="true"/>
+                <expressions xmi:type="expression:Expression" xmi:id="_B8DWcnPDEe-CMou5BLGUxw" name="send_msg01_identificadorProceso" content="solicitudInforme.getIdentificadorProceso();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_B8DWc3PDEe-CMou5BLGUxw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expressions>
+              </expressions>
             </messageContent>
           </events>
         </elements>
@@ -1533,6 +1580,28 @@
               <referencedElements xmi:type="process:ContractInput" xmi:id="_JuAEMnOoEe-CMou5BLGUxw" name="solicitudInformeInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_JuAEM3OoEe-CMou5BLGUxw" type="JAVA_METHOD" expression="setDetalleSolicitud">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_11rFYHPAEe-CMou5BLGUxw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_11rFYXPAEe-CMou5BLGUxw" name="solicitudInforme" content="solicitudInforme" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaMark">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2JqYYHPAEe-CMou5BLGUxw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_11rFYnPAEe-CMou5BLGUxw" name="solicitudInformeInput.periodoAConsultar" content="solicitudInformeInput.periodoAConsultar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_9VjXUHPAEe-CMou5BLGUxw" name="solicitudInformeInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_11rFY3PAEe-CMou5BLGUxw" type="JAVA_METHOD" expression="setPeriodoAConsultar">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_BcZwkHPEEe-1xfmL7l5GDg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_BcZwkXPEEe-1xfmL7l5GDg" name="solicitudInforme" content="solicitudInforme" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaMark">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_BwpiQHPEEe-1xfmL7l5GDg" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_BcZwknPEEe-1xfmL7l5GDg" name="solicitudInformeInput.clienteAConsultar" content="solicitudInformeInput.clienteAConsultar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_LodU4HPEEe-1xfmL7l5GDg" name="solicitudInformeInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_BcZwk3PEEe-1xfmL7l5GDg" type="JAVA_METHOD" expression="setClienteAConsultar">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
@@ -1978,7 +2047,7 @@
         </outputs>
       </connectors>
       <formMapping xmi:type="process:FormMapping" xmi:id="_Mhsp1GW9Ee-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_4ukz4HO6Ee-CMou5BLGUxw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_MwUNcHPHEe-1xfmL7l5GDg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_Mhsp1mW9Ee-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_Mhsp12W9Ee-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -2260,7 +2329,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_X3VuMWcvEe-th7Abt9qiNg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_OiCQQGXFEe-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_4xTXwHO6Ee-CMou5BLGUxw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_MzIQ4HPHEe-1xfmL7l5GDg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_OiCQQmXFEe-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_OiCQQ2XFEe-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
