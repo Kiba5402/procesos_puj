@@ -37,6 +37,8 @@
                 <field type="TEXT" length="255" name="listaClientes" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="periodosDisponibles" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="periodoAConsultar" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="totalConsumos" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="observacionesDeOperaciones" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -55,6 +57,8 @@
                 <field type="TEXT" length="255" name="aplicacionesDisponibles" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="clienteAConsultar" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="periodoAConsultar" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="observacionesDeOperaciones" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="totalConsumos" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
