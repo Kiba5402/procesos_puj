@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "7707c972-0889-489b-bff1-32f2756462b4",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1726814867691,
+  "lastUpdate" : 1726815640469,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -1056,12 +1056,62 @@
                           "value" : 4
                         },
                         "value" : {
-                          "type" : "variable"
+                          "type" : "variable",
+                          "value" : "solicitudInforme.paqueteEstrategiasFidelizacion"
+                        },
+                        "toolbarsGrp1" : {
+                          "type" : "constant",
+                          "value" : [
+                            "h1",
+                            "h2",
+                            "h3",
+                            "h4",
+                            "h5",
+                            "h6",
+                            "p",
+                            "ul",
+                            "ol"
+                          ]
+                        },
+                        "toolbarsGrp2" : {
+                          "type" : "constant",
+                          "value" : [
+                            "bold",
+                            "italics",
+                            "underline",
+                            "strikeThrough",
+                            "pre",
+                            "quote"
+                          ]
+                        },
+                        "toolbarsGrp3" : {
+                          "type" : "constant",
+                          "value" : [
+                            "justifyLeft",
+                            "justifyCenter",
+                            "justifyRight",
+                            "indent",
+                            "outdent"
+                          ]
+                        },
+                        "toolbarsGrp4" : {
+                          "type" : "constant",
+                          "value" : [
+                            "html",
+                            "insertImage",
+                            "insertLink",
+                            "insertVideo",
+                            "wordcount",
+                            "charcount",
+                            "undo",
+                            "redo",
+                            "clear"
+                          ]
                         }
                       },
-                      "reference" : "c4af0a42-942d-4342-80f4-d38ee96d266b",
+                      "reference" : "c440f21f-c0d3-4709-8636-a72338675de4",
                       "hasValidationError" : false,
-                      "id" : "pbTextarea"
+                      "id" : "pbRichTextarea"
                     }
                   ],
                   [
