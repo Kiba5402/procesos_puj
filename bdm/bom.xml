@@ -40,6 +40,7 @@
                 <field type="TEXT" length="255" name="totalConsumos" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="observacionesDeOperaciones" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="validacionReglasNegocio" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="infoDetalladaCliente" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

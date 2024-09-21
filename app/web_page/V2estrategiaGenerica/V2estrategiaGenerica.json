@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "7707c972-0889-489b-bff1-32f2756462b4",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1726815640469,
+  "lastUpdate" : 1726954222151,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -1401,6 +1401,19 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "detalladaCliente" : {
+      "type" : "expression",
+      "value" : [
+        "/*let detallada = '{\"totalSize\":1,\"done\":true,\"records\":[{\"attributes\":{\"type\":\"Account\",\"url\":\"/services/data/v53.0/sobjects/Account/001Hu00003NDXlBIAX\"},\"Name\":\"Banco Occidente\",\"BillingCountry\":\"Colombia\",\"BillingCity\":\"Ibagué\",\"BillingStreet\":\"Calle 37 #13a-15\",\"Phone\":\"1234567890\",\"Description\":\"Es una entidad financiera colombiana perteneciente al Grupo Aval Acciones y Valores, con sede principal en la ciudad de Cali que lleva una trayectoria de cincuenta y ocho años\"}]}';*/",
+        "",
+        "let detallada = $data.solicitudInforme.infoDetalladaCliente;",
+        "",
+        "detallada = JSON.parse(detallada);",
+        "",
+        "return detallada.records[0];"
       ],
       "exposed" : false
     }
