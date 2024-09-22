@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "7707c972-0889-489b-bff1-32f2756462b4",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1726979682910,
+  "lastUpdate" : 1727032066480,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -1119,7 +1119,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "solicitudInforme.detalleSolicitud"
+                          "value" : "solicitudInforme.observacionesMarketing"
                         },
                         "toolbarsGrp1" : {
                           "type" : "constant",
