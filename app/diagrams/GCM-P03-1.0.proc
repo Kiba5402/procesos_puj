@@ -200,6 +200,99 @@
               </operator>
             </outputs>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_cFYeEHkZEe-RGZ52MownTw" name="TrazaActividad" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_cFYeEXkZEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeEnkZEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeE3kZEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeFHkZEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeFXkZEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeFnkZEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeF3kZEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeGHkZEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_cFYeGXkZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeGnkZEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_cFYeG3kZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeHHkZEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeHXkZEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA;&#xD;&#xA;String id_proceso =  analiticaOP.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;3&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_r5Ej0HkaEe-RGZ52MownTw" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeHnkZEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeH3kZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeIHkZEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeIXkZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeInkZEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeI3kZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeJHkZEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeJXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeJnkZEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeJ3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeKHkZEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeKXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeKnkZEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeK3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeLHkZEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeLXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeLnkZEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeL3kZEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeMHkZEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeMXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeMnkZEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeM3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeNHkZEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeNXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeNnkZEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeN3kZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeOHkZEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeOXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeOnkZEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeO3kZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYePHkZEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYePXkZEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYePnkZEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeP3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeQHkZEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeQXkZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeQnkZEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeQ3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeRHkZEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeRXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeRnkZEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeR3kZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeSHkZEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeSXkZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_cFYeSnkZEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_cFYeS3kZEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_W1988HMFEe--us9BAOQ8QQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_W1988XMFEe--us9BAOQ8QQ" name="analiticaOP" content="analiticaOP" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaOp">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_W1988nMFEe--us9BAOQ8QQ" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
@@ -603,6 +696,99 @@
               </operator>
             </outputs>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_pmLJkHkZEe-RGZ52MownTw" name="TrazaActividad1" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_pmLJkXkZEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJknkZEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJk3kZEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJlHkZEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJlXkZEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJlnkZEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJl3kZEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJmHkZEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_pmLJmXkZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJmnkZEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_pmLJm3kZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJnHkZEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJnXkZEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA;&#xD;&#xA;String id_proceso =  analiticaOP.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;5&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_yt01IHkaEe-RGZ52MownTw" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJnnkZEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJn3kZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJoHkZEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJoXkZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJonkZEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJo3kZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJpHkZEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJpXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJpnkZEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJp3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJqHkZEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJqXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJqnkZEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJq3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJrHkZEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJrXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJrnkZEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJr3kZEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJsHkZEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJsXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJsnkZEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJs3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJtHkZEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJtXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJtnkZEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJt3kZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJuHkZEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJuXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJunkZEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJu3kZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJvHkZEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJvXkZEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJvnkZEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJv3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJwHkZEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJwXkZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJwnkZEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJw3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJxHkZEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJxXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJxnkZEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJx3kZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJyHkZEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJyXkZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_pmLJynkZEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_pmLJy3kZEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_eM2aJHPlEe-Kf4ISyygAhw">
             <leftOperand xmi:type="expression:Expression" xmi:id="_eM2aJXPlEe-Kf4ISyygAhw" name="analiticaOP" content="analiticaOP" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaOp">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_eM2aJnPlEe-Kf4ISyygAhw" name="analiticaOP" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaOp"/>
@@ -696,7 +882,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_usiRoWadEe-gueu3e-gqpw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_7MRZoGW9Ee-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_ZvYXYHkWEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_SUqVcHkaEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_7MRZomW9Ee-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_7MRZo2W9Ee-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -1032,6 +1218,99 @@
               </parameters>
             </configuration>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_149J0HkZEe-RGZ52MownTw" name="trazaActividad" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_149J0XkZEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J0nkZEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_149J03kZEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J1HkZEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_149J1XkZEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J1nkZEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_149J13kZEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J2HkZEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_149J2XkZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J2nkZEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_149J23kZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J3HkZEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_149J3XkZEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA;&#xD;&#xA;String id_proceso =  coordinacionTI.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;4&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_wJVfIHkaEe-RGZ52MownTw" name="coordinacionTI" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaTI"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J3nkZEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_149J33kZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J4HkZEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_149J4XkZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J4nkZEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_149J43kZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J5HkZEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_149J5XkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J5nkZEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_149J53kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J6HkZEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_149J6XkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J6nkZEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_149J63kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J7HkZEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_149J7XkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J7nkZEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_149J73kZEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J8HkZEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_149J8XkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J8nkZEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_149J83kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J9HkZEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_149J9XkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J9nkZEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_149J93kZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J-HkZEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_149J-XkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J-nkZEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_149J-3kZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J_HkZEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_149J_XkZEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149J_nkZEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_149J_3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149KAHkZEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_149KAXkZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149KAnkZEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_149KA3kZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149KBHkZEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_149KBXkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149KBnkZEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_149KB3kZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149KCHkZEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_149KCXkZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_149KCnkZEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_149KC3kZEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="__n3Tw2XAEe-U4-i8oNpc-g" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="__n3TxGXAEe-U4-i8oNpc-g" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="__n3TxWXAEe-U4-i8oNpc-g" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -1043,7 +1322,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_ZZ4c0WcgEe-th7Abt9qiNg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_3F8WD2XAEe-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_ZeZ8IHkWEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_SDIgkHkaEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3F8WEWXAEe-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_3F8WEmXAEe-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -1661,6 +1940,99 @@
               </parameters>
             </configuration>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_nltjIHkYEe-RGZ52MownTw" name="trazaActividad1" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_nltjIXkYEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjInkYEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjI3kYEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjJHkYEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjJXkYEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjJnkYEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjJ3kYEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjKHkYEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_nltjKXkYEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjKnkYEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_nltjK3kYEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjLHkYEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjLXkYEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA; &#xD;&#xA;String id_proceso =  solicitudInforme.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;8&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_z60eoHkYEe-RGZ52MownTw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjL3kYEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjMHkYEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjMXkYEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjMnkYEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjM3kYEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjNHkYEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjNXkYEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjNnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjN3kYEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjOHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjOXkYEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjOnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjO3kYEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjPHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjPXkYEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjPnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjP3kYEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjQHkYEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjQXkYEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjQnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjQ3kYEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjRHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjRXkYEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjRnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjR3kYEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjSHkYEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjSXkYEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjSnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjS3kYEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjTHkYEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjTXkYEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjTnkYEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjT3kYEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjUHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjUXkYEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjUnkYEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjU3kYEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjVHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjVXkYEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjVnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjV3kYEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjWHkYEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjWXkYEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjWnkYEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_nltjW3kYEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_nltjXHkYEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_OO0Ju3cSEe-RGZ52MownTw">
             <leftOperand xmi:type="expression:Expression" xmi:id="_OO0JvHcSEe-RGZ52MownTw" name="solicitudInforme" content="solicitudInforme" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaMark">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_OO0JvXcSEe-RGZ52MownTw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
@@ -2130,6 +2502,99 @@
               </operator>
             </outputs>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_sA1qoHkYEe-RGZ52MownTw" name="trazaActividad1" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_sA1qoXkYEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qonkYEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qo3kYEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qpHkYEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qpXkYEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qpnkYEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qp3kYEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qqHkYEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_sA1qqXkYEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qqnkYEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_sA1qq3kYEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qrHkYEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qrXkYEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA; &#xD;&#xA;String id_proceso =  solicitudInforme.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;2&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ulA3kHkYEe-RGZ52MownTw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qr3kYEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qsHkYEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qsXkYEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qsnkYEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qs3kYEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qtHkYEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qtXkYEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qtnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qt3kYEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1quHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1quXkYEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qunkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qu3kYEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qvHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qvXkYEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qvnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qv3kYEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qwHkYEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qwXkYEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qwnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qw3kYEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qxHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qxXkYEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qxnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qx3kYEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qyHkYEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qyXkYEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qynkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qy3kYEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qzHkYEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qzXkYEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1qznkYEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1qz3kYEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1q0HkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1q0XkYEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1q0nkYEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1q03kYEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1q1HkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1q1XkYEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1q1nkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1q13kYEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1q2HkYEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1q2XkYEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1q2nkYEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_sA1q23kYEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_sA1q3HkYEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_JuAEFnOoEe-CMou5BLGUxw">
             <leftOperand xmi:type="expression:Expression" xmi:id="_JuAEF3OoEe-CMou5BLGUxw" name="solicitudInforme" content="solicitudInforme" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaMark">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_JuAEGHOoEe-CMou5BLGUxw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
@@ -2327,6 +2792,99 @@
                 <inputTypes>java.lang.String</inputTypes>
               </operator>
             </outputs>
+          </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_B7p8IHkZEe-RGZ52MownTw" name="trazaActividad111" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_B7p8IXkZEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8InkZEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8I3kZEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8JHkZEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8JXkZEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8JnkZEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8J3kZEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8KHkZEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_B7p8KXkZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8KnkZEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_B7p8K3kZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8LHkZEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8LXkZEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA; &#xD;&#xA;String id_proceso =  solicitudInforme.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;7&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_EUs3IHkZEe-RGZ52MownTw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8L3kZEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8MHkZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8MXkZEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8MnkZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8M3kZEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8NHkZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8NXkZEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8NnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8N3kZEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8OHkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8OXkZEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8OnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8O3kZEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8PHkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8PXkZEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8PnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8P3kZEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8QHkZEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8QXkZEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8QnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8Q3kZEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8RHkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8RXkZEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8RnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8R3kZEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8SHkZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8SXkZEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8SnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8S3kZEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8THkZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8TXkZEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8TnkZEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8T3kZEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8UHkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8UXkZEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8UnkZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8U3kZEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8VHkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8VXkZEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8VnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8V3kZEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8WHkZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8WXkZEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8WnkZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_B7p8W3kZEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_B7p8XHkZEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_qK2dK3caEe-RGZ52MownTw">
             <leftOperand xmi:type="expression:Expression" xmi:id="_qK2dLHcaEe-RGZ52MownTw" name="solicitudInforme" content="solicitudInforme" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaMark">
@@ -2570,6 +3128,99 @@
               </operator>
             </outputs>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_9TrrcHkYEe-RGZ52MownTw" name="trazaActividad11" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_9TrrcXkYEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrcnkYEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_9Trrc3kYEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrdHkYEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrdXkYEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrdnkYEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_9Trrd3kYEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrreHkYEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_9TrreXkYEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrenkYEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_9Trre3kYEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrfHkYEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrfXkYEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA; &#xD;&#xA;String id_proceso =  solicitudInforme.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;6&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="__pUtIHkYEe-RGZ52MownTw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrf3kYEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrgHkYEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrgXkYEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrgnkYEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrg3kYEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrhHkYEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrhXkYEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrhnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrh3kYEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrriHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrriXkYEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrinkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trri3kYEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrjHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrjXkYEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrjnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrj3kYEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrkHkYEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrkXkYEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrknkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrk3kYEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrlHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrlXkYEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrlnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrl3kYEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrmHkYEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrmXkYEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrmnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrm3kYEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrnHkYEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrnXkYEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrnnkYEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrn3kYEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrroHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrroXkYEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrronkYEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trro3kYEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrpHkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrpXkYEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrpnkYEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrp3kYEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrqHkYEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9TrrqXkYEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrqnkYEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9Trrq3kYEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_9TrrrHkYEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_GUnBU3cUEe-RGZ52MownTw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_GUnBVHcUEe-RGZ52MownTw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_GUnBVXcUEe-RGZ52MownTw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -2663,6 +3314,99 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Qu-dJXkNEe-RGZ52MownTw" key="trust_strategy">
                 <expression xmi:type="expression:Expression" xmi:id="_Qu-dJnkNEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_IPWu0HkZEe-RGZ52MownTw" name="trazaActividad11" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_IPWu0XkZEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu0nkZEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu03kZEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu1HkZEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu1XkZEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu1nkZEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu13kZEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu2HkZEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_IPWu2XkZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu2nkZEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_IPWu23kZEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu3HkZEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu3XkZEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA; &#xD;&#xA;String id_proceso =  solicitudInforme.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;10&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_K0XCMHkZEe-RGZ52MownTw" name="solicitudInforme" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaMark"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu33kZEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu4HkZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu4XkZEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu4nkZEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu43kZEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu5HkZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu5XkZEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu5nkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu53kZEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu6HkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu6XkZEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu6nkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu63kZEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu7HkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu7XkZEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu7nkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu73kZEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu8HkZEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu8XkZEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu8nkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu83kZEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu9HkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu9XkZEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu9nkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu93kZEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu-HkZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu-XkZEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu-nkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu-3kZEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu_HkZEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu_XkZEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWu_nkZEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWu_3kZEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWvAHkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWvAXkZEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWvAnkZEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWvA3kZEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWvBHkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWvBXkZEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWvBnkZEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWvB3kZEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWvCHkZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWvCXkZEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWvCnkZEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_IPWvC3kZEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_IPWvDHkZEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
               </parameters>
             </configuration>
           </connectors>
@@ -2838,7 +3582,7 @@
         </outputs>
       </connectors>
       <formMapping xmi:type="process:FormMapping" xmi:id="_Mhsp1GW9Ee-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_Zou80HkWEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_SNsKwHkaEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_Mhsp1mW9Ee-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_Mhsp12W9Ee-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -3092,6 +3836,99 @@
               </operator>
             </outputs>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_ABYLUHkaEe-RGZ52MownTw" name="trazaActividad" definitionId="rest-post" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_ABYLUXkaEe-RGZ52MownTw" definitionId="rest-post" version="1.3.0" modelVersion="8">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLUnkaEe-RGZ52MownTw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLU3kaEe-RGZ52MownTw" name="url()" content="'https://gc4b9e5e4209b9c-hpazvmc8qzxgkrnw.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/reportes_ejecucion_proceso/'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLVHkaEe-RGZ52MownTw" key="contentType">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLVXkaEe-RGZ52MownTw" name="application/json" content="application/json" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLVnkaEe-RGZ52MownTw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLV3kaEe-RGZ52MownTw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLWHkaEe-RGZ52MownTw" key="urlCookies">
+                <expression xmi:type="expression:TableExpression" xmi:id="_ABYLWXkaEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLWnkaEe-RGZ52MownTw" key="urlHeaders">
+                <expression xmi:type="expression:TableExpression" xmi:id="_ABYLW3kaEe-RGZ52MownTw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLXHkaEe-RGZ52MownTw" key="body">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLXXkaEe-RGZ52MownTw" name="body()" content="import java.text.SimpleDateFormat&#xD;&#xA;import java.util.Date&#xD;&#xA;import java.util.TimeZone&#xD;&#xA; &#xD;&#xA;// Crear el formato de fecha ISO 8601 con milisegundos y la letra 'Z' para el UTC&#xD;&#xA;def sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;)&#xD;&#xA; &#xD;&#xA;// Establecer el huso horario en UTC&#xD;&#xA;sdf.setTimeZone(TimeZone.getTimeZone(&quot;America/Bogota&quot;))&#xD;&#xA; &#xD;&#xA;// Obtener la fecha actual&#xD;&#xA;def currentDate = new Date()&#xD;&#xA; &#xD;&#xA;// Convertir la fecha al formato deseado&#xD;&#xA;def formattedDate = sdf.format(currentDate)&#xD;&#xA;&#xD;&#xA;String id_proceso =  financiera.identificadorProceso.toString();&#xD;&#xA; &#xD;&#xA;return '{\&quot;idproceso\&quot;: \&quot;'+id_proceso+'\&quot;,\&quot;idactividad\&quot;: \&quot;9&quot;,\&quot;fecha&quot;: \&quot;'+formattedDate+'\&quot;}';" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_-EJNIHkaEe-RGZ52MownTw" name="financiera" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaFinanc"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLXnkaEe-RGZ52MownTw" key="do_not_follow_redirect">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLX3kaEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLYHkaEe-RGZ52MownTw" key="ignore_body">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLYXkaEe-RGZ52MownTw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLYnkaEe-RGZ52MownTw" key="TLS">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLY3kaEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLZHkaEe-RGZ52MownTw" key="hostname_verifier">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLZXkaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLZnkaEe-RGZ52MownTw" key="trust_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLZ3kaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLaHkaEe-RGZ52MownTw" key="trust_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLaXkaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLankaEe-RGZ52MownTw" key="key_store_file">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLa3kaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLbHkaEe-RGZ52MownTw" key="key_store_password">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLbXkaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLbnkaEe-RGZ52MownTw" key="auth_type">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLb3kaEe-RGZ52MownTw" name="NONE" content="NONE" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLcHkaEe-RGZ52MownTw" key="auth_username">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLcXkaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLcnkaEe-RGZ52MownTw" key="auth_password">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLc3kaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLdHkaEe-RGZ52MownTw" key="auth_host">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLdXkaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLdnkaEe-RGZ52MownTw" key="auth_port">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLd3kaEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLeHkaEe-RGZ52MownTw" key="auth_realm">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLeXkaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLenkaEe-RGZ52MownTw" key="auth_preemptive">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLe3kaEe-RGZ52MownTw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLfHkaEe-RGZ52MownTw" key="proxy_protocol">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLfXkaEe-RGZ52MownTw" name="HTTP" content="HTTP" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLfnkaEe-RGZ52MownTw" key="proxy_host">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLf3kaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLgHkaEe-RGZ52MownTw" key="proxy_port">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLgXkaEe-RGZ52MownTw" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLgnkaEe-RGZ52MownTw" key="proxy_username">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLg3kaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLhHkaEe-RGZ52MownTw" key="proxy_password">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLhXkaEe-RGZ52MownTw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLhnkaEe-RGZ52MownTw" key="socket_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLh3kaEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLiHkaEe-RGZ52MownTw" key="connection_timeout_ms">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLiXkaEe-RGZ52MownTw" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_ABYLinkaEe-RGZ52MownTw" key="trust_strategy">
+                <expression xmi:type="expression:Expression" xmi:id="_ABYLi3kaEe-RGZ52MownTw" name="DEFAULT" content="DEFAULT" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_37Ia2GcvEe-th7Abt9qiNg">
             <leftOperand xmi:type="expression:Expression" xmi:id="_37Ia2WcvEe-th7Abt9qiNg" name="financiera" content="financiera" type="TYPE_VARIABLE" returnType="com.company.model.ReqEstClientesAnaliticaFinanc">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_37Ia2mcvEe-th7Abt9qiNg" name="financiera" dataType="_Mhsp9GW9Ee-U4-i8oNpc-g" className="com.company.model.ReqEstClientesAnaliticaFinanc"/>
@@ -3221,7 +4058,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_X3VuMWcvEe-th7Abt9qiNg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_OiCQQGXFEe-U4-i8oNpc-g">
-        <targetForm xmi:type="expression:Expression" xmi:id="_Zr9P8HkWEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_SRPOAHkaEe-RGZ52MownTw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_OiCQQmXFEe-U4-i8oNpc-g">
         <targetForm xmi:type="expression:Expression" xmi:id="_OiCQQ2XFEe-U4-i8oNpc-g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

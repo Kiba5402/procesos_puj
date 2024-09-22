@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "3aee1eb7-73bf-4dbc-a6d6-a14d9487a098",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1727032176290,
+  "lastUpdate" : 1727034494721,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -1084,8 +1084,8 @@
                           "value" : ""
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "ocultoMarketing"
                         },
                         "readOnly" : {
                           "type" : "constant",
@@ -1447,6 +1447,13 @@
       "type" : "expression",
       "value" : [
         "return $data.solicitudInforme.observacionesFinancieras != null"
+      ],
+      "exposed" : false
+    },
+    "ocultoMarketing" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.solicitudInforme.observacionesMarketing != null"
       ],
       "exposed" : false
     }
