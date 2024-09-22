@@ -52,6 +52,14 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="Esteban">
+      <firstName>Esteban</firstName>
+      <lastName>Reyes</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Gerente comercial y de marketing">
@@ -68,6 +76,9 @@
     </role>
     <role name="Coordinador de operaciones TI">
       <displayName>Coordinador de operaciones TI</displayName>
+    </role>
+    <role name="Director comercial y de marketing">
+      <displayName>Director comercial y de marketing</displayName>
     </role>
   </roles>
   <groups>
@@ -113,6 +124,11 @@
       <userName>Carolina</userName>
       <roleName>Coordinador de operaciones TI</roleName>
       <groupName>Gerencia de TI</groupName>
+    </membership>
+    <membership>
+      <userName>Esteban</userName>
+      <roleName>Director comercial y de marketing</roleName>
+      <groupName>Gerencia comercial y marketing</groupName>
     </membership>
   </memberships>
 </organization:Organization>
