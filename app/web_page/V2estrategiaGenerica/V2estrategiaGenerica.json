@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "7707c972-0889-489b-bff1-32f2756462b4",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1726959637414,
+  "lastUpdate" : 1726979682910,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -716,7 +716,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "posible feedback hecho por el cliente cliente"
+                          "value" : "posible feedback hecho por el cliente"
                         },
                         "placeholder" : {
                           "type" : "constant"

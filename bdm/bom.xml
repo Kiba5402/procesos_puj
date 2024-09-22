@@ -11,6 +11,10 @@
                 <field type="TEXT" length="255" name="paqueteEstrategiasRetencion" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="observacionesFinancieras" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="paqueteAprobado" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="clienteAConsultar" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="periodoAConsultar" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="aplicacionesAConsultar" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="totalConsumos" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -41,6 +45,7 @@
                 <field type="TEXT" length="255" name="observacionesDeOperaciones" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="validacionReglasNegocio" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="infoDetalladaCliente" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="idPaqueteEstrategiasFidelizacion" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
